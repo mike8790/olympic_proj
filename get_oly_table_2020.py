@@ -30,20 +30,21 @@ for name in country_names:
 medal_data = {'Gold': gold, 'Silver': silver, 'Bronze': bronze,
               'Total Medals': total}
 
-wine_df = pd.DataFrame(medal_data)
+df = pd.DataFrame(medal_data)
 
 count = 1
-for n in range(len(wine_df)):
-    if ((wine_df.iloc[n, 1] == wine_df.iloc[n-1, 1])
-        and (wine_df.iloc[n, 2] == wine_df.iloc[n-1, 2])
-            and (wine_df.iloc[n, 3] == wine_df.iloc[n-1, 3])):
+for n in range(len(df)):
+    if ((df.iloc[n, 1] == df.iloc[n-1, 1])
+        and (df.iloc[n, 2] == df.iloc[n-1, 2])
+            and (df.iloc[n, 3] == df.iloc[n-1, 3])):
         rank.append(rank[-1])
     else:
         rank.append(count)
     count += 1
 
-wine_df = wine_df.apply(pd.to_numeric, args=('coerce',))
-wine_df.insert(0, 'Country', country)
-wine_df.insert(0, 'Rank', rank)
+medal_df = (df.apply(pd.to_numeric, args=('coerce',)).
+            fillna(0, downcast='infer'))
+medal_df.insert(0, 'Country', country)
+medal_df.insert(0, 'Rank', rank)
 
-print(wine_df)
+medal_df.to_csv("2020_oly_table.csv", header='False', sep='\t', na_rep='NULL')
