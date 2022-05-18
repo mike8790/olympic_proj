@@ -16,6 +16,7 @@ gold = []
 silver = []
 bronze = []
 total = []
+rank = []
 
 for n in range(0, len(medals), 4):
     gold.append(medals[n].text)
@@ -26,9 +27,23 @@ for n in range(0, len(medals), 4):
 for name in country_names:
     country.append(name.text)
 
-data = {'Country': country, 'Gold': gold, 'Silver': silver, 'Bronze': bronze,
-        'Total Medals': total}
+medal_data = {'Gold': gold, 'Silver': silver, 'Bronze': bronze,
+              'Total Medals': total}
 
-df = pd.DataFrame(data)
+wine_df = pd.DataFrame(medal_data)
 
-print(df)
+count = 1
+for n in range(len(wine_df)):
+    if ((wine_df.iloc[n, 1] == wine_df.iloc[n-1, 1])
+        and (wine_df.iloc[n, 2] == wine_df.iloc[n-1, 2])
+            and (wine_df.iloc[n, 3] == wine_df.iloc[n-1, 3])):
+        rank.append(rank[-1])
+    else:
+        rank.append(count)
+    count += 1
+
+wine_df = wine_df.apply(pd.to_numeric, args=('coerce',))
+wine_df.insert(0, 'Country', country)
+wine_df.insert(0, 'Rank', rank)
+
+print(wine_df)
