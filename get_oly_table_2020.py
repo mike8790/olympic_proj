@@ -1,8 +1,6 @@
 import requests as req
 from bs4 import BeautifulSoup as bs
-#import pandas as pd
-import numpy as np
-#import matplotlib.pyplot as plt
+import pandas as pd
 
 webpage = req.get(
     "https://olympics.com/en/olympic-games/tokyo-2020/medals")
@@ -27,3 +25,10 @@ for n in range(0, len(medals), 4):
 
 for name in country_names:
     country.append(name.text)
+
+data = {'Country': country, 'Gold': gold, 'Silver': silver, 'Bronze': bronze,
+        'Total Medals': total}
+
+df = pd.DataFrame(data)
+
+print(df)
