@@ -18,22 +18,12 @@ gold = []
 silver = []
 bronze = []
 total = []
-all_medals = []
 
-for medal in medals:
-    all_medals.append(medal.text)
-
-for gld in all_medals[0:-1:4]:
-    gold.append(gold)
-
-for slv in all_medals[1:-1:4]:
-    silver.append(slv)
-
-for brnz in all_medals[2:-1:4]:
-    bronze.append(brnz)
-
-for ttl in all_medals[3:-1:4]:
-    total.append(ttl)
+for n in range(0, len(medals), 4):
+    gold.append(medals[n].text)
+    silver.append(medals[n+1].text)
+    bronze.append(medals[n+2].text)
+    total.append(medals[n+3].text)
 
 for name in country_names:
     country.append(name.text)
