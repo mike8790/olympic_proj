@@ -5,15 +5,32 @@ import pandas as pd
 df_gdp = pd.read_csv('worldbank_GDP_table.csv')
 df_oly = pd.read_csv('2020_oly_table.csv', sep='\t')
 
-gdp_country = df_gdp.get('Country Name')
-oly_country = df_oly.get('Country')
+gdp_country = list(df_gdp.get('Country Name'))
+oly_country = list(df_oly.get('Country'))
+gdp_country.sort
+oly_country.sort
 
 matching = []
+matching_oppo = []
+not_matching = []
 for country in gdp_country:
     matching.append([s for s in oly_country if country in s])
+    not_matching.append([s for s in oly_country if country not in s])
+
+for notcountry in oly_country:
+    matching_oppo.append([s for s in gdp_country if notcountry in s])
 
 matching = [x for x in matching if x]
-print(len(matching))
+not_matching = [x for x in not_matching if x]
+matching_oppo = [x for x in not_matching if x]
+
+string_file = ('matching\n', str(matching), '\nnot_matching\n',
+               str(not_matching), '\nmatching_oppo', str(matching_oppo))
+string_file = str(string_file)
+
+f = open('file.txt', 'w')
+f.write(string_file)
+f.close()
 
 '''
 for n in range(0, len(medals), 4):
