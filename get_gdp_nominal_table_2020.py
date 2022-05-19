@@ -8,12 +8,12 @@ df_oly = pd.read_csv('2020_oly_table.csv', sep='\t')
 gdp_country = df_gdp.get('Country Name')
 oly_country = df_oly.get('Country')
 
-gdp_oly_country = []
+matching = []
 for country in gdp_country:
-    if country in oly_country:
-        gdp_oly_country.append(country)
+    matching.append([s for s in oly_country if country in s])
 
-print(gdp_oly_country)
+matching = [x for x in matching if x]
+print(len(matching))
 
 '''
 for n in range(0, len(medals), 4):
