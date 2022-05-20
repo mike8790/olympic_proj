@@ -20,7 +20,11 @@ for country in df_oly['Country']:
 
 df_oly['Nominal_GDP'] = gdp_col
 df_oly['Nominal_GDP'] = pd.to_numeric(df_oly['Nominal_GDP'], errors='coerce')
-df_oly.to_csv("2020_oly_table_v2.csv", header='False', sep='\t')
+print(df_oly)
+
+df_oly[['Rank', 'Country', 'Gold', 'Silver', 'Bronze', 'Total_Medals,',
+        'Nominal_GDP']].to_csv(
+        "2020_oly_table_v2.csv", header='False', sep='\t')
 
 
 '''
