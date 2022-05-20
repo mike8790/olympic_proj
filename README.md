@@ -18,7 +18,7 @@ Slovakia
 Venezuela
 China
 Hong_Kong
-America
+United_States
 Moldova
 
 Missing data -
