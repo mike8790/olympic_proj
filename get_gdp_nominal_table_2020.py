@@ -1,4 +1,6 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 
 df_gdp = pd.read_csv('worldbank_GDP_table.csv', sep=',')
 df_oly = pd.read_csv('2020_oly_table.csv', sep='\t')
@@ -17,4 +19,16 @@ for country in df_oly['Country']:
         gdp_col.append('NULL')
 
 df_oly['Nominal_GDP'] = gdp_col
-df_oly.to_csv("2020_oly_table_v2.csv", header='False', sep='\t', na_rep='NULL')
+df_oly['Nominal_GDP'] = pd.to_numeric(df_oly['Nominal_GDP'], errors='coerce')
+df_oly.to_csv("2020_oly_table_v2.csv", header='False', sep='\t')
+
+
+'''
+# need to work out plotting of both line and scatter
+theta = np.polyfit(df_oly['Rank'], df_oly['Nominal_GDP'], 1)
+y_line = theta[1] + theta[0] * df_oly['Rank']
+plt.scatter(df_oly['Rank'], df_oly['Nominal_GDP'])
+plt.plot(df_oly['Rank'], y_line, 'r')
+
+plt.show()
+'''
