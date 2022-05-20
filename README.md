@@ -18,6 +18,7 @@ Slovakia
 Venezuela
 China
 America
+Moldova
 
 Missing data -
 from nominal GDP list = Taiwan (Chinese Taipei)
