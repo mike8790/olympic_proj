@@ -16,6 +16,8 @@ Korea
 Russia
 Slovakia
 Venezuela
+China
+America
 
 Missing data -
 from nominal GDP list = Taiwan (Chinese Taipei)
