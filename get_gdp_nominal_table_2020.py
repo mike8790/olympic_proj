@@ -1,36 +1,29 @@
 import requests as req
 from bs4 import BeautifulSoup as bs
 import pandas as pd
+from collections import OrderedDict
 
-df_gdp = pd.read_csv('worldbank_GDP_table.csv')
+df_gdp = pd.read_csv('worldbank_GDP_table.csv', sep=',')
 df_oly = pd.read_csv('2020_oly_table.csv', sep='\t')
 
-gdp_country = list(df_gdp.get('Country Name'))
+gdp_country = list(df_gdp.get('Country_Name'))
 oly_country = list(df_oly.get('Country'))
+
 gdp_country.sort
 oly_country.sort
 
 matching = []
-matching_oppo = []
-not_matching = []
+
 for country in gdp_country:
     matching.append([s for s in oly_country if country in s])
-    not_matching.append([s for s in oly_country if country not in s])
-
-for notcountry in oly_country:
-    matching_oppo.append([s for s in gdp_country if notcountry in s])
 
 matching = [x for x in matching if x]
-not_matching = [x for x in not_matching if x]
-matching_oppo = [x for x in not_matching if x]
 
-string_file = ('matching\n', str(matching), '\nnot_matching\n',
-               str(not_matching), '\nmatching_oppo', str(matching_oppo))
-string_file = str(string_file)
+matching = [x for sublist in matching for x in sublist]
+matching = list(OrderedDict.fromkeys(matching))
 
-f = open('file.txt', 'w')
-f.write(string_file)
-f.close()
+x = range(0,len(matching))
+print(x)
 
 '''
 for n in range(0, len(medals), 4):
