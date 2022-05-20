@@ -1,7 +1,4 @@
-import requests as req
-from bs4 import BeautifulSoup as bs
 import pandas as pd
-from collections import OrderedDict
 
 df_gdp = pd.read_csv('worldbank_GDP_table.csv', sep=',')
 df_oly = pd.read_csv('2020_oly_table.csv', sep='\t')
@@ -9,49 +6,15 @@ df_oly = pd.read_csv('2020_oly_table.csv', sep='\t')
 gdp_country = list(df_gdp.get('Country_Name'))
 oly_country = list(df_oly.get('Country'))
 
-gdp_country.sort
-oly_country.sort
+gdp_col = []
 
-matching = []
-
-for country in gdp_country:
-    matching.append([s for s in oly_country if country in s])
-
-matching = [x for x in matching if x]
-
-matching = [x for sublist in matching for x in sublist]
-matching = list(OrderedDict.fromkeys(matching))
-
-x = range(0,len(matching))
-print(x)
-
-'''
-for n in range(0, len(medals), 4):
-    gold.append(medals[n].text)
-    silver.append(medals[n+1].text)
-    bronze.append(medals[n+2].text)
-    total.append(medals[n+3].text)
-
-for name in country_names:
-    country.append(name.text)
-
-medal_data = {'Gold': gold, 'Silver': silver, 'Bronze': bronze,
-              'Total Medals': total}
-
-df = pd.DataFrame(medal_data)
-
-count = 1
-for n in range(len(df)):
-    if ((df.iloc[n, 1] == df.iloc[n-1, 1])
-        and (df.iloc[n, 2] == df.iloc[n-1, 2])
-            and (df.iloc[n, 3] == df.iloc[n-1, 3])):
-        rank.append(rank[-1])
+for country in df_oly['Country']:
+    if country in gdp_country:
+        idx = df_gdp.index[
+            df_gdp['Country_Name'].str.contains(country)].tolist()
+        gdp_col.append(df_gdp['2019'][idx[0]])
     else:
-        rank.append(count)
-    count += 1
+        gdp_col.append('NULL')
 
-medal_df = (df.apply(pd.to_numeric, args=('coerce',)).
-            fillna(0, downcast='infer'))
-medal_df.insert(0, 'Country', country)
-medal_df.insert(0, 'Rank', rank)
-'''
+df_oly['Nominal_GDP'] = gdp_col
+df_oly.to_csv("2020_oly_table_v2.csv", header='False', sep='\t', na_rep='NULL')
