@@ -17,6 +17,7 @@ Russia
 Slovakia
 Venezuela
 China
+Hong_Kong
 America
 Moldova
 
