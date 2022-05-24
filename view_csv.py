@@ -1,12 +1,6 @@
 import pandas as pd
-import sys
 
 
-def view_csv(filepathname: str, separator: str):
-    df_csv = pd.read_csv(filepathname, separator)
-    print(df_csv)
-    return
+df_csv = pd.read_csv('2020_oly_table_v2.csv', sep='\t')
 
-
-if __name__ == '__main__':
-    globals()[sys.argv[1]](sys.argv[2], sys.argv[3])
+print(df_csv)
