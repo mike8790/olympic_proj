@@ -1,6 +1,4 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
 
 df_gdp = pd.read_csv('worldbank_GDP_table.csv', sep=',')
 df_oly = pd.read_csv('2020_oly_table.csv', sep='\t')
@@ -21,7 +19,7 @@ for country in df_oly['Country']:
 df_oly['Nominal_GDP'] = gdp_col
 df_oly['Nominal_GDP'] = pd.to_numeric(df_oly['Nominal_GDP'], errors='coerce')
 
-#df_oly[['Rank', 'Country', 'Gold', 'Silver', 'Bronze', 'Total_Medals,',
+#        df_oly[['Rank', 'Country', 'Gold', 'Silver', 'Bronze', 'Total_Medals,',
 #        'Nominal_GDP']].to_csv(
 #        "2020_oly_table.csv", header='False', sep='\t')
 
