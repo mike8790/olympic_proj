@@ -47,4 +47,4 @@ medal_df = (df.apply(pd.to_numeric, args=('coerce',)).
 medal_df.insert(0, 'Country', country)
 medal_df.insert(0, 'Rank', rank)
 
-medal_df.to_csv("2020_oly_table.csv", header='False', sep='\t', na_rep='NULL')
+medal_df.to_csv("2020_oly_table_tester.csv", header='False', sep='\t', na_rep='NULL')

@@ -42,5 +42,9 @@ United_States
 Moldova
 *refers to South Korea, little info on North Korea and they do not enter olympics
 
-Missing data -
-From nominal GDP list = Taiwan (Chinese Taipei)
+Missing data from worldbank lists-
+From nominal GDP and population list = Taiwan (Chinese Taipei)
+
+For world populations = wrote a script to extract country populations from wikipedia, 
+but worldbank csv download is much better - as contains data from 1960 onward:
+https://data.worldbank.org/indicator/SP.POP.TOTL
