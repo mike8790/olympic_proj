@@ -1,14 +1,15 @@
 import pandas as pd
 
-# open the Oly CSV and whatever statistic CSV I want to add to the Oly table
+# open the Oly CSV and whatever statistic CSV to add to the Oly table
 df_new = pd.read_csv('worldbank_population_table.csv', sep=',')
 df_oly = pd.read_csv('2020_oly_table_v2.csv', sep='\t')
+data_name = 'Population'
 
 # extract country names columns from both dataframes
 new_country = list(df_new.get('Country'))
 oly_country = list(df_oly.get('Country'))
 
-# set range of years I want to extract from table
+# set range of years to extract from table (if multiple years in the CSV)
 years = range(2020, 2000, -1)
 
 # nested loop - look at one year at a time, for each year first check
@@ -23,7 +24,7 @@ for year in years:
             new_col.append(df_new[str(year)][idx[0]])
         else:
             new_col.append('NULL')
-    column_name = ('Population_' + str(year))
+    column_name = (data_name + '_' + str(year))
     df_oly[column_name] = new_col
     df_oly[column_name] = pd.to_numeric(df_oly[column_name],
                                         errors='coerce')
@@ -32,4 +33,4 @@ for year in years:
 # version
 version_num = '3'  # as versions get created iterate this
 filename = ('2020_oly_table_v' + version_num + '.csv')
-df_oly.to_csv(filename, header='False', sep='\t', index=False)
+df_oly.to_csv(filename, header='True', sep='\t', index=False)

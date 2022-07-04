@@ -1,6 +1,6 @@
 import pandas as pd
 
-# open the CSV I created using olympics wiki medal table
+# open the CSV created using olympics wiki medal table
 # (see get_oly_table_2020) and the nominal GDP table I downloaded from the
 # worldbank website.
 df_gdp = pd.read_csv('worldbank_GDP_table.csv', sep=',')
@@ -10,7 +10,7 @@ df_oly = pd.read_csv('2020_oly_table.csv', sep=',')
 gdp_country = list(df_gdp.get('Country_Name'))
 oly_country = list(df_oly.get('Country'))
 
-# set range of years I want to extract GDP for
+# set range of years to extract GDP for
 years = range(2020, 2000, -1)
 
 # nested loop - look at one year of GDP at a time, for each year first check
@@ -34,4 +34,4 @@ for year in years:
 # version
 version_num = '2'  # as versions get created iterate this
 filename = ('2020_oly_table_v' + version_num + '.csv')
-df_oly.to_csv(filename, header='False', sep='\t', index=False)
+df_oly.to_csv(filename, header='True', sep='\t', index=False)
