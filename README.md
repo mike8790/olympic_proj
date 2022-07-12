@@ -1,10 +1,8 @@
 # olympic_proj
-Fund project to play around with Python for data analysis/ science as I extend my
+Fun project to play around with Python for data analysis/ science as I extend my
 Python/ SQL etc experience with codeacademy and other online learning oppurtunities.
 
-Long-term - want to add a number of factors to the olympic_table (e.g. GDP, population,
-  happiness index, central funding of sport etc), report on the correlations between different factors and performance at different Olympics. Ultimately, try and identify the best predictive model
-  for performance in the Olympics. If quick enough with the model, test it on the upcoming commonwealth games (not a perfect test as not all countries present in both, but of interest).
+Will be added to inconsistently as I find time and get 
 
 1) 'get_oly_table_2020.py': generated a df containing the medal table for the 2020 Olympics in Japan by scraping from the official website and saved a csv: '2020_oly_table'
 
@@ -13,12 +11,22 @@ values for countries of the world. Loaded this in and the '2020_oly_table' to th
 GDP values for every country on the olympic table and appended their GDPs for the past 20 years- script
 adds new v* to end of oly_table once updated.
 
-To do:
-Add olympics results from previous Olympics (back to Barca 1992 as first after fall of the wall?)
-Add GDP to table to match first Olympics - up to 2 years before first Olympics on list?
-Add population figures.
+3) For world populations = wrote a script to extract country populations from wikipedia, 
+but worldbank csv download is much better - as contains data from 1960 onward:
+https://data.worldbank.org/indicator/SP.POP.TOTL
+
+4) plot_scatter.py = script to take two columns from specified CSV file and location, plot a scatter and
+correlation coefficient of two variables
+
+5) Wrote script to loop through olympic website and extract medal tables from all olympics back to Seoul '88
+- ignored Moscow and LA because of major boycotts.
+
+To do?
+Calculate correlation between avg. ranking in previous Olympics and performance in most recent Olympics
 Create report to show effects of population and GDP on average performance?
-Then - begin to add other factors to the table
+Add other factors to the table - identify potential factors of interest and access relevant data
+Expand beyond simple correlation analyses and descriptive statistics - perhaps multivariate regression
+Transfer data from multiple CSVs to a SQL database
 
 ** Because of different naming conventions - certain countries I have decided on using
 a specific name, whenever I extract new CSV etc I will manually adapt these.
@@ -45,6 +53,6 @@ Moldova
 Missing data from worldbank lists-
 From nominal GDP and population list = Taiwan (Chinese Taipei)
 
-For world populations = wrote a script to extract country populations from wikipedia, 
-but worldbank csv download is much better - as contains data from 1960 onward:
-https://data.worldbank.org/indicator/SP.POP.TOTL
+
+
+
