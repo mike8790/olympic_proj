@@ -21,7 +21,7 @@
 19	 France	67,853,000
 20	 United Kingdom	67,081,234
 21	 Thailand	66,805,967
-22	 South Africa	60,142,978
+22	 South_Africa	60,142,978
 23	 Tanzania	59,441,988
 24	 Italy	58,906,742
 25	 Myanmar	55,294,979
@@ -85,8 +85,8 @@
 83	 Jordan	11,242,352
 84	 Cuba	11,113,215
 85	 Greece	10,678,632
-86	 Dominican Republic	10,535,535
-87	 Czech Republic	10,516,708
+86	 Dominican_Republic	10,535,535
+87	 Czech_Republic	10,516,708
 88	 Sweden	10,475,203
 89	 Portugal	10,347,892
 90	 Azerbaijan	10,164,464
@@ -95,7 +95,7 @@
 93	 Israel	9,538,940
 94	 Tajikistan	9,506,000
 95	 Belarus	9,349,645
-96	 United Arab Emirates	9,282,410
+96	 UAE	9,282,410
 97	 Papua New Guinea	9,122,994
 98	 Austria	9,027,999
 99	 Switzerland	8,736,500
@@ -108,7 +108,7 @@
 106	 Serbia	6,871,547
 107	 El Salvador	6,825,935
 108	 Lebanon	6,769,000
-109	 Kyrgyzstan	6,700,000
+109	 Kyrgyz	6,700,000
 110	 Nicaragua	6,595,674
 111	 Bulgaria	6,520,314
 112	 Turkmenistan	6,118,000
@@ -121,7 +121,7 @@
 119	 Slovakia	5,434,712
 120	 Palestine	5,227,193
 121	 Costa Rica	5,163,038
-122	 New Zealand	5,132,032
+122	 New_Zealand	5,132,032
 123	 Ireland	5,123,536
 124	 Kuwait	4,670,713
 125	 Liberia	4,661,010
@@ -134,7 +134,7 @@
 132	 Uruguay	3,554,915
 133	 Mongolia	3,444,825
 134	 Bosnia and Herzegovina	3,320,954
-135	 Puerto Rico (United States)	3,285,874
+135	 Puerto_Rico (United States)	3,285,874
 136	 Armenia	2,963,900
 137	 Albania	2,829,741
 138	 Qatar	2,799,202
@@ -153,7 +153,7 @@
 151	 Guinea-Bissau	1,646,077
 152	 Equatorial Guinea	1,505,588
 153	 Bahrain	1,501,635
-154	 Trinidad and Tobago	1,367,558
+154	 Trinidad_and_Tobago	1,367,558
 155	 Estonia	1,330,068
 156	 East Timor	1,317,780
 157	 Mauritius	1,266,334
@@ -223,7 +223,7 @@
 221	 Åland (Finland)	30,344
 222	 British Virgin Islands (United Kingdom)	30,000
 223	 Palau	17,957
-224	 Cook Islands (New Zealand)	15,342
+224	 Cook Islands (New_Zealand)	15,342
 225	 Anguilla (United Kingdom)	15,000
 226	 Nauru	11,832
 227	 Wallis and Futuna (France)	11,369
@@ -235,8 +235,8 @@
 233	 Falkland Islands (United Kingdom)	4,000
 234	 Christmas Island (Australia)	1,966
 235	 Norfolk Island (Australia)	1,734
-236	 Niue (New Zealand)	1,549
-237	 Tokelau (New Zealand)	1,501
+236	 Niue (New_Zealand)	1,549
+237	 Tokelau (New_Zealand)	1,501
 238	 Vatican City	825
 239	 Cocos (Keeling) Islands (Australia)	573
 240	 Pitcairn Islands (United Kingdom)	40

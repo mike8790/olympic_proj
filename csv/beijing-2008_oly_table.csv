@@ -1,11 +1,11 @@
-Rank	Country	Gold	Silver	Bronze	Total
-1	People's Republic of China	48	22	30	100
-2	United States of America	36	39	37	112
-3	Russian Federation	24	13	23	60
-4	Great Britain	19	13	19	51
+Rank	Country	Gold	Silver	Bronze	Total_Medals
+1	China	48	22	30	100
+2	United_States	36	39	37	112
+3	Russia	24	13	23	60
+4	United_Kingdom	19	13	19	51
 5	Germany	16	11	14	41
 6	Australia	14	15	17	46
-7	Republic of Korea	13	11	8	32
+7	S_Korea	13	11	8	32
 8	Japan	9	8	8	25
 9	Italy	8	9	10	27
 10	France	7	16	20	43
@@ -23,13 +23,13 @@ Rank	Country	Gold	Silver	Bronze	Total
 22	Norway	3	5	1	9
 23	Brazil	3	4	10	17
 24	Belarus	3	4	7	14
-25	Czech Republic	3	3	1	7
+25	Czech_Republic	3	3	1	7
 26	Slovakia	3	3	0	6
-27	New Zealand	3	2	4	9
+27	New_Zealand	3	2	4	9
 28	Georgia	3	2	2	7
 29	Kazakhstan	2	3	4	9
 30	Denmark	2	2	3	7
-31	Democratic People's Republic of Korea	2	2	2	6
+31	Korea	2	2	2	6
 31	Thailand	2	2	2	6
 33	Mongolia	2	2	0	4
 34	Switzerland	2	1	4	7
@@ -43,14 +43,14 @@ Rank	Country	Gold	Silver	Bronze	Total
 42	Bulgaria	1	1	3	5
 42	Turkey	1	1	3	5
 44	Finland	1	1	2	4
-44	Chinese Taipei	1	1	2	4
+44	Taiwan	1	1	2	4
 46	Latvia	1	1	1	3
 47	Portugal	1	1	0	2
-47	Trinidad and Tobago	1	1	0	2
-47	Dominican Republic	1	1	0	2
+47	Trinidad_and_Tobago	1	1	0	2
+47	Dominican_Republic	1	1	0	2
 47	Estonia	1	1	0	2
 51	India	1	0	2	3
-52	Islamic Republic of Iran	1	0	1	2
+52	Iran	1	0	1	2
 53	Panama	1	0	0	1
 53	Tunisia	1	0	0	1
 53	Cameroon	1	0	0	1
@@ -65,7 +65,7 @@ Rank	Country	Gold	Silver	Bronze	Total
 64	Austria	0	1	2	3
 64	Serbia	0	1	2	3
 64	Ireland	0	1	2	3
-64	Kyrgyzstan	0	1	2	3
+64	Kyrgyz	0	1	2	3
 68	Tajikistan	0	1	1	2
 68	Morocco	0	1	1	2
 68	Algeria	0	1	1	2
@@ -74,7 +74,7 @@ Rank	Country	Gold	Silver	Bronze	Total
 72	Sudan	0	1	0	1
 72	Malaysia	0	1	0	1
 72	Singapore	0	1	0	1
-72	South Africa	0	1	0	1
+72	South_Africa	0	1	0	1
 72	Vietnam	0	1	0	1
 72	Iceland	0	1	0	1
 72	Chile	0	1	0	1
