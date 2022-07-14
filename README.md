@@ -28,6 +28,9 @@ Add other factors to the table - identify potential factors of interest and acce
 Expand beyond simple correlation analyses and descriptive statistics - perhaps multivariate regression
 Transfer data from multiple CSVs to a SQL database
 
+Missing data from worldbank lists-
+From nominal GDP and population list = Taiwan (Chinese Taipei)
+
 ** Because of different naming conventions - certain countries I have decided on using
 a specific name, whenever I extract new CSV etc I will manually adapt these.
 Largely tried to keep countries to single word - so if prefixes or suffixes e.g.
@@ -39,7 +42,6 @@ Bahamas
 United_Kingdom
 Iran
 Kyrgyz
-Korea*
 Russia
 Slovakia
 Venezuela
@@ -48,11 +50,19 @@ China
 Hong_Kong
 United_States
 Moldova
-*refers to South Korea, little info on North Korea and they do not enter olympics
-
-Missing data from worldbank lists-
-From nominal GDP and population list = Taiwan (Chinese Taipei)
-
+Trinidad_and_Tobago
+UAE
+Dominican_Republic
+N_Korea
+S_Korea
+Czech_Republic
+New_Zealand
+IOC
+Cote_dIvorie
+Puerto_Rico
+W_Germany - 1988
+E_Germany - 1988
+USSR- 1988, USSR (changed from Unified States) 1992
 
 
 
